@@ -58,7 +58,7 @@ void envia_comando (char comando)
 		delay_ms(10);
 }
 void envia_dado (char dado)
-{
+{		
 		comando_dado = 1;
 		pulso = 1;
 		LATD = dado;
@@ -72,36 +72,98 @@ void inicializar(){
 		envia_comando(0b00000001);	
 }
 
-void mostrar_LCD(){
+void animacao_bateria(){
+	envia_comando(0x40);
+	envia_dado(0b00100);
+	envia_comando(0x41);
+	envia_dado(0b11111);
+	envia_comando(0x42);
+	envia_dado(0b11111);
+	envia_comando(0x43);
+	envia_dado(0b11111);
+	envia_comando(0x44);
+	envia_dado(0b11111);
+	envia_comando(0x45);
+	envia_dado(0b11111);
+	envia_comando(0x46);
+	envia_dado(0b11111);
+	envia_comando(0x47);
+	envia_dado(0b11111);
 
-	envia_dado('D');
-	envia_dado('A');
-	envia_dado('V');
-	envia_dado('I');
-	envia_dado('S');
-	envia_dado('O');
-	envia_dado('N');
-	envia_dado(' ');
-	envia_dado('L');
-	envia_dado('U');
-	envia_dado('C');
-	envia_dado('A');
-	envia_dado('S');
+	envia_comando(0x48);
+	envia_dado(0b00100);
+	envia_comando(0x49);
+	envia_dado(0b11111);
+	envia_comando(0x4A);
+	envia_dado(0b10001);
+	envia_comando(0x4B);
+	envia_dado(0b10001);
+	envia_comando(0x4C);
+	envia_dado(0b11111);
+	envia_comando(0x4D);
+	envia_dado(0b11111);
+	envia_comando(0x4E);
+	envia_dado(0b11111);
+	envia_comando(0x4F);
+	envia_dado(0b11111);
+
+	envia_comando(0x50);
+	envia_dado(0b00100);
+	envia_comando(0x51);
+	envia_dado(0b11111);
+	envia_comando(0x52);
+	envia_dado(0b10001);
+	envia_comando(0x53);
+	envia_dado(0b10001);
+	envia_comando(0x54);
+	envia_dado(0b10001);
+	envia_comando(0x55);
+	envia_dado(0b10001);
+	envia_comando(0x56);
+	envia_dado(0b11111);
+	envia_comando(0x57);
+	envia_dado(0b11111);
+
+}
+void mostrar_LCD(){
+ 	
 	envia_comando(0xC0);
-	envia_dado('I');
-	envia_dado('F');
 	envia_dado('C');
-	envia_dado('E');
-	envia_dado('-');
-	envia_dado('F');
-	envia_dado('O');
+	envia_dado('A');
 	envia_dado('R');
-	envia_dado('T');
-	envia_dado('A');
-	envia_dado('L');
+	envia_dado('R');
 	envia_dado('E');
-	envia_dado('Z');
+	envia_dado('G');
 	envia_dado('A');
+	envia_dado('N');
+	envia_dado('D');
+	envia_dado('O');
+	envia_dado('.');
+	envia_dado('.');
+	envia_dado('.');
+
+	
+	while(1){
+		envia_comando(0x80);
+		envia_dado(2);
+		envia_comando(0xCC);
+		envia_dado('.');
+		delay_s(1);
+ 		envia_comando(0x80);
+		envia_dado(1);
+		envia_comando(0xCC);
+		envia_dado(' ');
+		delay_s(1);
+		envia_comando(0x80);
+		envia_dado(0);
+		envia_comando(0xCC);
+		envia_dado('.');
+		delay_s(1);
+		envia_comando(0xCC);
+		envia_dado(' ');
+		delay_ms(500);
+	}
+
 }
 
 main ()
@@ -122,6 +184,7 @@ main ()
 
 	inicializar();
 	LATCbits.LATC4 = 1;
+	animacao_bateria();
 	mostrar_LCD();
 	while(1){
 

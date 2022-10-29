@@ -1,23 +1,23 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Sat Oct 29 01:25:41 2022
+Linker Map File - Created Sat Oct 29 19:51:51 2022
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
                _entry_scn       code   0x000000    program   0x000006
                    .cinit    romdata   0x000006    program   0x000002
-         .code_questao3.o       code   0x000008    program   0x000294
-               _cinit_scn       code   0x00029c    program   0x00009e
-                    .code       code   0x00033a    program   0x000020
-             _startup_scn       code   0x00035a    program   0x00001c
-           .code___init.o       code   0x000376    program   0x000002
-        .romdata___init.o    romdata   0x000378    program   0x000000
-        .idata___init.o_i    romdata   0x000378    program   0x000000
-      .romdata_questao3.o    romdata   0x000378    program   0x000000
-      .idata_questao3.o_i    romdata   0x000378    program   0x000000
-            .code_c018i.o       code   0x000378    program   0x000000
-         .romdata_c018i.o    romdata   0x000378    program   0x000000
-         .idata_c018i.o_i    romdata   0x000378    program   0x000000
+         .code_questao3.o       code   0x000008    program   0x00044a
+               _cinit_scn       code   0x000452    program   0x00009e
+                    .code       code   0x0004f0    program   0x000020
+             _startup_scn       code   0x000510    program   0x00001c
+           .code___init.o       code   0x00052c    program   0x000002
+        .romdata___init.o    romdata   0x00052e    program   0x000000
+        .idata___init.o_i    romdata   0x00052e    program   0x000000
+      .romdata_questao3.o    romdata   0x00052e    program   0x000000
+      .idata_questao3.o_i    romdata   0x00052e    program   0x000000
+            .code_c018i.o       code   0x00052e    program   0x000000
+         .romdata_c018i.o    romdata   0x00052e    program   0x000000
+         .idata_c018i.o_i    romdata   0x00052e    program   0x000000
 .config_300001_questao3.o    romdata   0x300001    program   0x000001
 .config_300002_questao3.o    romdata   0x300002    program   0x000001
 .config_300003_questao3.o    romdata   0x300003    program   0x000001
@@ -38,10 +38,10 @@ Linker Map File - Created Sat Oct 29 01:25:41 2022
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x000377      
+                            0x000000    0x00052d      
                             0x300001    0x300003      
                             0x300005    0x300005      
-            892 out of 33048 program addresses used, program memory utilization is 2%
+            1330 out of 33048 program addresses used, program memory utilization is 4%
 
 
 
@@ -49,35 +49,36 @@ Linker Map File - Created Sat Oct 29 01:25:41 2022
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00001   0x000374    program     static                          
-       ___return_lbl00002   0x000338    program     static                          
+       ___return_lbl00001   0x00052a    program     static                          
+       ___return_lbl00002   0x0004ee    program     static                          
                __config_0   0x300001    program     static C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
                __config_1   0x300002    program     static C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
                __config_2   0x300003    program     static C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
                __config_3   0x300005    program     static C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
-                   __init   0x000376    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-            __zero_memory   0x00033a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                _do_cinit   0x00029c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                   __init   0x00052c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+            __zero_memory   0x0004f0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                _do_cinit   0x000452    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 _startup   0x00035a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                compare_l   0x000350    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                copy_loop   0x00030e    program     static                          
-            copy_one_byte   0x000314    program     static                          
+                 _startup   0x000510    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+         animacao_bateria   0x0001a0    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
+                compare_l   0x000506    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                copy_loop   0x0004c4    program     static                          
+            copy_one_byte   0x0004ca    program     static                          
                  delay_ms   0x000088    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
                   delay_s   0x000008    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
                  delay_us   0x0000ee    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
-                     done   0x000338    program     static                          
-             done_copying   0x000322    program     static                          
+                     done   0x0004ee    program     static                          
+             done_copying   0x0004d8    program     static                          
             envia_comando   0x000136    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
                envia_dado   0x00015e    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
               inicializar   0x000186    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
-                     loop   0x00036a    program     static                          
-                   loop_h   0x000348    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                   loop_l   0x000352    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                     main   0x000282    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
-              mostrar_LCD   0x0001a0    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
-                     test   0x0002b6    program     static                          
-               zero_block   0x000348    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     loop   0x000520    program     static                          
+                   loop_h   0x0004fe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   loop_l   0x000508    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     main   0x000436    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
+              mostrar_LCD   0x000322    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
+                     test   0x00046c    program     static                          
+               zero_block   0x0004fe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                    ADCON1   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
@@ -289,24 +290,25 @@ Linker Map File - Created Sat Oct 29 01:25:41 2022
             envia_comando   0x000136    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
                envia_dado   0x00015e    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
               inicializar   0x000186    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
-              mostrar_LCD   0x0001a0    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
-                     main   0x000282    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
-                _do_cinit   0x00029c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x0002b6    program     static                          
-                copy_loop   0x00030e    program     static                          
-            copy_one_byte   0x000314    program     static                          
-             done_copying   0x000322    program     static                          
-       ___return_lbl00002   0x000338    program     static                          
-                     done   0x000338    program     static                          
-            __zero_memory   0x00033a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-               zero_block   0x000348    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                   loop_h   0x000348    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                compare_l   0x000350    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                   loop_l   0x000352    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                 _startup   0x00035a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x00036a    program     static                          
-       ___return_lbl00001   0x000374    program     static                          
-                   __init   0x000376    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+         animacao_bateria   0x0001a0    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
+              mostrar_LCD   0x000322    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
+                     main   0x000436    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
+                _do_cinit   0x000452    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x00046c    program     static                          
+                copy_loop   0x0004c4    program     static                          
+            copy_one_byte   0x0004ca    program     static                          
+             done_copying   0x0004d8    program     static                          
+                     done   0x0004ee    program     static                          
+       ___return_lbl00002   0x0004ee    program     static                          
+            __zero_memory   0x0004f0    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   loop_h   0x0004fe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               zero_block   0x0004fe    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                compare_l   0x000506    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   loop_l   0x000508    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 _startup   0x000510    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x000520    program     static                          
+       ___return_lbl00001   0x00052a    program     static                          
+                   __init   0x00052c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
                __config_0   0x300001    program     static C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
                __config_1   0x300002    program     static C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
                __config_2   0x300003    program     static C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ModuloLCD_CaracteresEspeciais\questao3.c
