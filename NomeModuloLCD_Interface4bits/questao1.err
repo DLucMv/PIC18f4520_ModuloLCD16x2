@@ -1,0 +1,4 @@
+Warning[2068] C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\NomeModuloLCD_Interface4bits\questao1.c 102 : obsolete use of implicit 'int' detected
+Warning[2103] C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\NomeModuloLCD_Interface4bits\questao1.c 102 : default startup code expects main function declared as 'void main (void)'
+Warning[2058] C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\NomeModuloLCD_Interface4bits\questao1.c 118 : call of function without prototype
+Warning[2058] C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\NomeModuloLCD_Interface4bits\questao1.c 121 : call of function without prototype
