@@ -1,23 +1,23 @@
 MPLINK 5.00, LINKER
-Linker Map File - Created Sat Oct 29 01:44:17 2022
+Linker Map File - Created Wed Nov 02 18:32:53 2022
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
                _entry_scn       code   0x000000    program   0x000006
                    .cinit    romdata   0x000006    program   0x000002
-         .code_questao4.o       code   0x000008    program   0x000294
-               _cinit_scn       code   0x00029c    program   0x00009e
-                    .code       code   0x00033a    program   0x000020
-             _startup_scn       code   0x00035a    program   0x00001c
-           .code___init.o       code   0x000376    program   0x000002
-        .romdata___init.o    romdata   0x000378    program   0x000000
-        .idata___init.o_i    romdata   0x000378    program   0x000000
-      .romdata_questao4.o    romdata   0x000378    program   0x000000
-      .idata_questao4.o_i    romdata   0x000378    program   0x000000
-            .code_c018i.o       code   0x000378    program   0x000000
-         .romdata_c018i.o    romdata   0x000378    program   0x000000
-         .idata_c018i.o_i    romdata   0x000378    program   0x000000
+         .code_questao4.o       code   0x000008    program   0x000708
+               _cinit_scn       code   0x000710    program   0x00009e
+                    .code       code   0x0007ae    program   0x000020
+             _startup_scn       code   0x0007ce    program   0x00001c
+           .code___init.o       code   0x0007ea    program   0x000002
+        .romdata___init.o    romdata   0x0007ec    program   0x000000
+        .idata___init.o_i    romdata   0x0007ec    program   0x000000
+      .romdata_questao4.o    romdata   0x0007ec    program   0x000000
+      .idata_questao4.o_i    romdata   0x0007ec    program   0x000000
+            .code_c018i.o       code   0x0007ec    program   0x000000
+         .romdata_c018i.o    romdata   0x0007ec    program   0x000000
+         .idata_c018i.o_i    romdata   0x0007ec    program   0x000000
 .config_300001_questao4.o    romdata   0x300001    program   0x000001
 .config_300002_questao4.o    romdata   0x300002    program   0x000001
 .config_300003_questao4.o    romdata   0x300003    program   0x000001
@@ -38,10 +38,10 @@ Linker Map File - Created Sat Oct 29 01:44:17 2022
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x000377      
+                            0x000000    0x0007eb      
                             0x300001    0x300003      
                             0x300005    0x300005      
-            892 out of 33048 program addresses used, program memory utilization is 2%
+            2032 out of 33048 program addresses used, program memory utilization is 6%
 
 
 
@@ -49,35 +49,41 @@ Linker Map File - Created Sat Oct 29 01:44:17 2022
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00001   0x000374    program     static                          
-       ___return_lbl00002   0x000338    program     static                          
+       ___return_lbl00001   0x0007e8    program     static                          
+       ___return_lbl00002   0x0007ac    program     static                          
                __config_0   0x300001    program     static C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
                __config_1   0x300002    program     static C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
                __config_2   0x300003    program     static C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
                __config_3   0x300005    program     static C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
-                   __init   0x000376    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-            __zero_memory   0x00033a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                _do_cinit   0x00029c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                   __init   0x0007ea    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+            __zero_memory   0x0007ae    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                _do_cinit   0x000710    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 _startup   0x00035a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                compare_l   0x000350    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                copy_loop   0x00030e    program     static                          
-            copy_one_byte   0x000314    program     static                          
+                 _startup   0x0007ce    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                asterisco   0x000320    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
+                  cadeado   0x00029e    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
+                compare_l   0x0007c4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                copy_loop   0x000782    program     static                          
+            copy_one_byte   0x000788    program     static                          
                  delay_ms   0x000088    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
                   delay_s   0x000008    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
                  delay_us   0x0000ee    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
-                     done   0x000338    program     static                          
-             done_copying   0x000322    program     static                          
+                     done   0x0007ac    program     static                          
+             done_copying   0x000796    program     static                          
             envia_comando   0x000136    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
                envia_dado   0x00015e    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
               inicializar   0x000186    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
-                     loop   0x00036a    program     static                          
-                   loop_h   0x000348    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                   loop_l   0x000352    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                     main   0x000282    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
-              mostrar_LCD   0x0001a0    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
-                     test   0x0002b6    program     static                          
-               zero_block   0x000348    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     loop   0x0007de    program     static                          
+                   loop_h   0x0007bc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   loop_l   0x0007c6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                     main   0x0006c8    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
+  mostrar_acesso_liberado   0x0005b0    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
+         mostrar_saudacao   0x00039c    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
+   mostrar_senha_invalida   0x0004a6    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
+                  sorriso   0x0001a0    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
+                     test   0x00072a    program     static                          
+                   triste   0x000220    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
+               zero_block   0x0007bc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                    ADCON0   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                ADCON0bits   0x000fc2       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
                    ADCON1   0x000fc1       data     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
@@ -289,24 +295,30 @@ Linker Map File - Created Sat Oct 29 01:44:17 2022
             envia_comando   0x000136    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
                envia_dado   0x00015e    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
               inicializar   0x000186    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
-              mostrar_LCD   0x0001a0    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
-                     main   0x000282    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
-                _do_cinit   0x00029c    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x0002b6    program     static                          
-                copy_loop   0x00030e    program     static                          
-            copy_one_byte   0x000314    program     static                          
-             done_copying   0x000322    program     static                          
-       ___return_lbl00002   0x000338    program     static                          
-                     done   0x000338    program     static                          
-            __zero_memory   0x00033a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-               zero_block   0x000348    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                   loop_h   0x000348    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                compare_l   0x000350    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                   loop_l   0x000352    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
-                 _startup   0x00035a    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x00036a    program     static                          
-       ___return_lbl00001   0x000374    program     static                          
-                   __init   0x000376    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+                  sorriso   0x0001a0    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
+                   triste   0x000220    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
+                  cadeado   0x00029e    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
+                asterisco   0x000320    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
+         mostrar_saudacao   0x00039c    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
+   mostrar_senha_invalida   0x0004a6    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
+  mostrar_acesso_liberado   0x0005b0    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
+                     main   0x0006c8    program     extern C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
+                _do_cinit   0x000710    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x00072a    program     static                          
+                copy_loop   0x000782    program     static                          
+            copy_one_byte   0x000788    program     static                          
+             done_copying   0x000796    program     static                          
+       ___return_lbl00002   0x0007ac    program     static                          
+                     done   0x0007ac    program     static                          
+            __zero_memory   0x0007ae    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   loop_h   0x0007bc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+               zero_block   0x0007bc    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                compare_l   0x0007c4    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                   loop_l   0x0007c6    program     static E:\3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4520.asm
+                 _startup   0x0007ce    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x0007de    program     static                          
+       ___return_lbl00001   0x0007e8    program     static                          
+                   __init   0x0007ea    program     extern E:\3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
                __config_0   0x300001    program     static C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
                __config_1   0x300002    program     static C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
                __config_2   0x300003    program     static C:\Users\lucas\Meu Drive\IFCE\IFCE-Graduação2021.1-EngComp\Disciplinas\Mcontroladores e Mprocessadores\Lista03\ControleDeAcesso_LCD_TecladoMatricial3x4\questao4.c
