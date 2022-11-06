@@ -462,14 +462,14 @@ void main (void)
 							LATCbits.LATC2 = 1;
 							inicializar();
 							mostrar_acesso_liberado();
-							delay_s(1);
+							delay_s(2);
 							
 						}
 						else{
 							LATBbits.LATB7 = 1;
 							inicializar();
 							mostrar_senha_invalida();
-							delay_s(1);
+							delay_s(2);
 						}	
 					};
 				};
