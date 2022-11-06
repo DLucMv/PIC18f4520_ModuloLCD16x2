@@ -20,18 +20,39 @@ void envia_dado (char);
 void inicializar(void);
 
 //Caracteres especiais
-void sorriso(void);
-void triste(void);
-void cadeado(void);
-void asterisco(void);
+void caracteres_especiais(void);
+
 
 //Mostrar mensagens no display
+void mostrar_LCD();
 void mostrar_saudacao(void);
 void mostrar_senha_invalida(void);
 void mostrar_acesso_liberado(void);
 
+//Teclado
+char varre_teclado(void);
+
 #define comando_dado LATCbits.LATC0
 #define pulso LATCbits.LATC1
+#define linha1 PORTBbits.RB3
+#define linha2 PORTBbits.RB2
+#define linha3 PORTBbits.RB1
+#define linha4 PORTBbits.RB0
+#define coluna1 LATBbits.LATB4
+#define coluna2 LATBbits.LATB5
+#define coluna3 LATBbits.LATB6
+#define LED LATBbits.LATB7
+
+
+char tecla;
+char senha[4] = {'0','0','0','0'};
+char chave[4] = {'1','4','1','7'};
+int cadeado = 0;
+int contador = 0;
+int i = 0;
+int passou = 0;
+int verificador = 0;
+
 
 
 void delay_s (int s)
@@ -92,7 +113,7 @@ void inicializar(){
 }
 
 
-void sorriso(){
+void caracteres_especiais(){
 
 	envia_comando(0x40);
 	envia_dado(0b00010);//1
@@ -111,11 +132,6 @@ void sorriso(){
 	envia_comando(0x47);
 	envia_dado(0b00000);//8
 
-}
-
-
-void triste(){
-
 	envia_comando(0x48);
 	envia_dado(0b00000);//1
 	envia_comando(0x49);
@@ -132,11 +148,6 @@ void triste(){
 	envia_dado(0b00001);//7
 	envia_comando(0x4F);
 	envia_dado(0b00000);//8
-
-}
-
-
-void cadeado(){
 
 	envia_comando(0x50);
 	envia_dado(0b01110);//1
@@ -155,10 +166,6 @@ void cadeado(){
 	envia_comando(0x57);
 	envia_dado(0b11111);//8
 
-}
-
-
-void asterisco(){
 
 	envia_comando(0x58);
 	envia_dado(0b00000);//1
@@ -295,8 +302,95 @@ void mostrar_acesso_liberado(){
 	envia_dado(0);
 }
 
+void mostrar_LCD(){
+	delay_ms(300);
+	envia_dado(3);
+}
 
-main ()
+
+char varre_teclado(void){
+	while(passou == 0){
+			coluna1 = 0;
+			coluna2 = 1;
+			coluna3 = 1;
+		
+			if(!linha1){
+				while(!linha1){passou = 1;};
+				contador++;
+				return '1';
+			}
+			if(!linha2){
+				while(!linha2){passou = 1;};
+				contador++;
+				return '4';
+			}
+			if(!linha3){
+				while(!linha3){passou = 1;};
+				contador++;
+				return '7';
+			}
+			if(!linha4){
+				while(!linha4){passou = 1;};
+				contador++;
+				return '*';
+			}
+	delay_ms(10);
+			coluna1 = 1;
+			coluna2 = 0;
+			coluna3 = 1;
+		
+			if(!linha1){
+				while(!linha1){passou = 1;};
+				contador++;
+				return '2';
+			}
+			if(!linha2){
+				while(!linha2){passou = 1;};
+				contador++;
+				return '5';
+			}
+			if(!linha3){
+				while(!linha3){passou = 1;};
+				contador++;
+				return '8';
+			}
+			if(!linha4){
+				while(!linha4){passou = 1;};
+				contador++;
+				return '0';
+			}
+	delay_ms(10);
+			coluna1 = 1;
+			coluna2 = 1;
+			coluna3 = 0;
+		
+			if(!linha1){
+				while(!linha1){passou = 1;};
+				contador++;
+				return '3';
+			}
+			if(!linha2){
+				while(!linha2){passou = 1;};
+				contador++;
+				return '6';
+			}
+			if(!linha3){
+				while(!linha3){passou = 1;};
+				contador++;
+				return '9';
+			}
+			if(!linha4){
+				while(!linha4){passou = 1;};
+				contador++;
+				return '#';
+			}
+	delay_ms(10);
+	}
+}
+
+
+
+void main (void)
 
 {	
 	//área de configuração (só roda uma vez)
@@ -307,29 +401,81 @@ main ()
 	OSCCONbits.IRCF0 = 1;	//OSC = 8MHz (interno)
 	
 	//BIT=1 -> PORTA DE ENTRADA, BIT=0 -> PORTA DE SAÍDA
-	TRISB=0B00000000;
+	TRISB=0B00001111;
 	TRISC=0B00000000;	 
 	TRISD=0B00000000;
 	
 
 	inicializar();
-	LATBbits.LATB7 = 0;
-	LATCbits.LATC2 = 0;
-	sorriso();
-	triste();
-	cadeado();
-	asterisco();
-	mostrar_saudacao();
-	delay_s(3);
-	mostrar_senha_invalida();
-	LATCbits.LATC2 = 0;
 	LATBbits.LATB7 = 1;
-	delay_s(3);
-	mostrar_acesso_liberado();
-	LATBbits.LATB7 = 0;
-	LATCbits.LATC2 = 1;
+	LATCbits.LATC2 = 0;
+	caracteres_especiais();
+	mostrar_saudacao();
+	
+	while(1){ 
+		if (varre_teclado()){
+			break;
+		}
+	}
 
 	while(1){
+		envia_comando(0b00000001);
+		envia_comando(0x80);
+		envia_dado(2);
+		if(LED == 1){
+			delay_ms(600);
+			LED = 0;
+		}
+		tecla = varre_teclado();
+		delay_ms(10);
+		passou = 0;
+		senha[0] = tecla;
+		while(contador == 1){
+			envia_comando(0x82);
+			mostrar_LCD();
+			tecla = varre_teclado();
+			delay_ms(10);
+			passou = 0;
+			senha[1] = tecla;
+			while(contador == 2){
+				mostrar_LCD();
+				tecla = varre_teclado();
+				delay_ms(10);
+				passou = 0;
+				senha[2] = tecla;
+				while(contador == 3){
+					mostrar_LCD();
+					tecla = varre_teclado();
+					delay_ms(10);
+					passou = 0;
+					senha[3] = tecla;
+					while(contador == 4){
+						mostrar_LCD();
+						verificador = 0;
+						for(i=0; i<4; i++){
+							if(chave[i]==senha[i]){
+								verificador++;
+							}
+						}
+						contador = 0;
+						if(verificador == 3){
+							LATCbits.LATC2 = 1;
+							inicializar();
+							mostrar_acesso_liberado();
+							delay_s(1);
+							
+						}
+						else{
+							LATBbits.LATB7 = 1;
+							inicializar();
+							mostrar_senha_invalida();
+							delay_s(1);
+						}	
+					};
+				};
+			};
+		};
+		break;
+	};
 
-	}
 }
